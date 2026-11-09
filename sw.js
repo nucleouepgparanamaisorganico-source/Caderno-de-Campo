@@ -1,5 +1,5 @@
 // Guarda o app no celular para abrir sem internet.
-const CACHE = 'caderno-v2';
+const CACHE = 'caderno-v4';
 const ARQUIVOS = ['./', 'index.html', 'manifest.json', 'icone.svg'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
