@@ -252,7 +252,7 @@ var SOBRE="Este caderno ajuda a registrar as atividades da produção orgânica:
 
 /* ---------- armazenamento local (funciona sem internet) ---------- */
 var CHAVE="caderno-campo-v1";
-var dados={perfil:{},registros:[],recentes:{},config:{url:"",lerSempre:true},dispositivo:""};
+var dados={perfil:{},registros:[],recentes:{},config:{url:"https://script.google.com/macros/s/AKfycbxQp0stdhM7pIUQkqtpdk0Zej_WCgDnWheBjNQq86Sa9P8_RNeosirIEOYCzm-B8EZQWQ/exec ",lerSempre:true},dispositivo:""};
 function carregar(){try{var t=localStorage.getItem(CHAVE);if(t){var d=JSON.parse(t);for(var k in d)dados[k]=d[k];}}catch(e){}
   if(!dados.dispositivo)dados.dispositivo="cel-"+Math.random().toString(36).slice(2,10);}
 function guardar(){try{localStorage.setItem(CHAVE,JSON.stringify(dados));}catch(e){}}
